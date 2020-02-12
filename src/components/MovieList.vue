@@ -1,7 +1,7 @@
 <template>
   <div id="movie-list">
     <div v-if="filteredMovies.length">
-      <movie-item v-for="movie in filteredMovies" v-bind:movie="movie.movie">
+      <movie-item v-for="movie in filteredMovies" v-bind:movie="movie.movie" v-bind:key="movie.movie.imdbID">
         <div class="movie-sessions">
           <div 
             v-for="session in filteredSessions(movie.sessions)" 
